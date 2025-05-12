@@ -26,4 +26,5 @@ Best for global route protection, redirects, or geolocation logic.
 
 ![localhost_3000_ (3)](https://github.com/user-attachments/assets/eb427267-9bf1-476f-9192-afe5449f7268)
 ![localhost_3000_ (4)](https://github.com/user-attachments/assets/854aa2a2-93a9-46df-9ea5-5c3f7307bc93)
-![localhost_3000_ (5)](https://github.com/user-attachments/assets/7736c962-2cc7-4011-bae2-13be2b10e0bf)
+![localhost_3000_ (6)](https://github.com/user-attachments/assets/cb8744a4-fd5e-4dd1-ad58-480928352827)
+
