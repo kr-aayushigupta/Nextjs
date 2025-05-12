@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lazy Loading",
+  title: "Nextjs Concepts",
   description: "Nextjs App",
 };
 

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Navbar() {
   return (
-    <div className="bg-blue-400 px-8 py-2 mt-4">
+    <div className="bg-blue-400 px-8 py-2 mt-4 sticky top-2">
 
         <ul className='flex  gap-10 justify-around'>
             <Link href="/"><li className='text-white font-semibold text-2xl hover:text-blue-800'> HOME</li></Link>
