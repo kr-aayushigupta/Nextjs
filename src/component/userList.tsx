@@ -50,21 +50,22 @@ export default function UserList() {
 
   return (
     <div className="p-4">
-      <h2 className="text-xl font-bold mb-4"> Scroll to Load Users</h2>
+      <h2 className="text-xl font-bold mb-4 text-center"> Scroll down to Load Users</h2>
       <ul className="space-y-2">
         {users.map((user) => (
-          <li key={user.id} className="p-3 border rounded shadow-sm">
-            <span className="font-semibold">{user.name}</span> – {user.email}
+          <li key={user.id} className="p-3 border rounded shadow-sm bg-sky-200">
+            <span className="font-semibold">{user.name}</span> - {user.website} - {user.email} - {user.address.city}
           </li>
         ))}
       </ul>
+      
 
       {hasMore ? (
-        <div ref={observerRef} className="h-10 mt-4 text-center text-gray-400">
-          🔄 Scroll down to load more...
+        <div ref={observerRef} className="h-10 my-40 text-center text-gray-400">
+           Scroll down to load more...
         </div>
       ) : (
-        <p className="mt-4 text-green-500">✅ All 100 users loaded</p>
+        <p className="mt-4 text-green-500"> All users loaded</p>
       )}
     </div>
   )

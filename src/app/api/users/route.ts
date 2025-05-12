@@ -2,8 +2,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url)
-  const page = Number(searchParams.get('page')) || 1
+  const { searchParams } = new URL(req.url) //to search for page
+  const page = Number(searchParams.get('page')) || 1 
   const limit = 20
   const start = (page - 1) * limit
 
