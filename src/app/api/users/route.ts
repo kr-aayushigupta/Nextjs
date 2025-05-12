@@ -11,25 +11,29 @@ export async function GET(req: NextRequest) {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
     const baseUsers = await res.json()
 
-    const fakeUsers = Array(limit).fill(baseUsers).flat().map((user, i) => ({
+    // const fakeUsers = Array(limit).fill(baseUsers).flat().map((user, i) => ({
+    //   ...user,
+    //   id: i + 1,
+    //   name: `${user.name} ${i + 1}`,
+    // }))
+
+    const all100 = Array(limit).fill(baseUsers).flat().map((user, i) => ({
       ...user,
       id: i + 1,
       name: `${user.name} ${i + 1}`,
     }))
 
-    const all100 = Array(limit).fill(fakeUsers).flat().map((user, i) => ({
-      ...user,
-      id: i + 1,
-      name: `${user.name} ${i + 1}`,
-    }))
+const paginated = all100.slice(start, start + limit)
 
-    const paginated = all100.slice(start, start + limit)
+return NextResponse.json({
+  data: paginated,
+  total: all100.length,
+  hasMore: start + limit < all100.length, // optionally send this
+})
 
-    return NextResponse.json({
-      data: paginated,
-      total: all100.length,
-    })
+
   } catch {
+
     return NextResponse.json({ error: 'Fetch error' }, { status: 500 })
   }
 }
